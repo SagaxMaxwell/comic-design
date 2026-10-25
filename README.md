@@ -8,11 +8,11 @@
 
 ## 设定目录
 
-- [世界观总纲](世界观/world.md)
-- [成长系统](机制/growth.md)
-- [技能与流派](机制/skills.md)
-- [装备与武器](机制/equipment.md)
-- [魔法系统](机制/magic.md)
-- [角色设计](角色/characters.md)
-- [剧情与创作原则](剧情/story-principles.md)
-- [男女主设定](角色/leads.md)
+- [[world-building/world|世界观总纲]]
+- [[mechanics/growth|成长系统]]
+- [[mechanics/skills|技能与流派]]
+- [[mechanics/equipment|装备与武器]]
+- [[mechanics/magic|魔法系统]]
+- [[characters/characters|角色设计]]
+- [[plot/story-principles|剧情与创作原则]]
+- [[characters/leads|男女主设定]]
