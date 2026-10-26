@@ -1,3 +1,7 @@
+---
+date created: 2026-10-10T00:23
+date updated: 2026-10-26T11:44
+---
 # 迷宫异世界设定
 
 ## 核心概念
@@ -8,11 +12,11 @@
 
 ## 设定目录
 
-- [[world-building/world|世界观总纲]]
-- [[mechanics/growth|成长系统]]
-- [[mechanics/skills|技能与流派]]
-- [[mechanics/equipment|装备与武器]]
-- [[mechanics/magic|魔法系统]]
-- [[characters/characters|角色设计]]
-- [[plot/story-principles|剧情与创作原则]]
-- [[characters/leads|男女主设定]]
+- [[comic-design/world-building/world|世界观总纲]]
+- [[comic-design/mechanics/growth|成长系统]]
+- [[comic-design/mechanics/skills|技能与流派]]
+- [[comic-design/mechanics/equipment|装备与武器]]
+- [[comic-design/mechanics/magic|魔法系统]]
+- [[comic-design/characters/characters|角色设计]]
+- [[comic-design/plot/story-principles|剧情与创作原则]]
+- [[comic-design/characters/leads|男女主设定]]
