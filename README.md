@@ -1,7 +1,8 @@
 ---
 date created: 2026-10-10T00:23
-date updated: 2026-10-26T11:44
+date updated: 2026-11-06T18:26
 ---
+
 # 迷宫异世界设定
 
 ## 核心概念
@@ -12,11 +13,49 @@ date updated: 2026-10-26T11:44
 
 ## 设定目录
 
-- [[comic-design/world-building/world|世界观总纲]]
-- [[comic-design/mechanics/growth|成长系统]]
-- [[comic-design/mechanics/skills|技能与流派]]
-- [[comic-design/mechanics/equipment|装备与武器]]
-- [[comic-design/mechanics/magic|魔法系统]]
-- [[comic-design/characters/characters|角色设计]]
-- [[comic-design/plot/story-principles|剧情与创作原则]]
-- [[comic-design/characters/leads|男女主设定]]
+```base
+filters:
+  and:
+    - 'file.inFolder("comic-design")'
+    - '["md", "ipynb"].contains(file.ext)'
+    - 'file.path != "comic-design/README.md"'
+    - '!file.path.contains("/.")'
+    - '!file.path.contains("/backups/")'
+    - 'file.size > 0'
+formulas:
+  outline: |
+    [
+      ["world.md","世界观总纲"],
+      ["growth.md","成长与技能"],
+      ["equipment.md","装备与武器"],
+      ["magic.md","魔法系统"],
+      ["characters.md","角色设定"],
+      ["story.md","剧情与创作原则"]
+    ]
+  position: 'formula.outline.reduce(if(file.path == "comic-design/" + value[0], index, acc), 999)'
+  note: 'file.asLink(if(formula.position < formula.outline.length, formula.outline[formula.position][1], file.name))'
+  topic: 'if(file.name == "world", "世界观", if(["growth", "equipment", "magic"].contains(file.name), "系统", if(file.name == "characters", "角色", if(file.name == "story", "创作", "其他"))))'
+properties:
+  formula.note:
+    displayName: 笔记
+views:
+  - type: kanban
+    name: 笔记
+    groupBy:
+      property: formula.topic
+      direction: ASC
+    groupOrder:
+      - 世界观
+      - 系统
+      - 角色
+      - 创作
+      - 其他
+    order:
+      - formula.note
+    sort:
+      - property: formula.position
+        direction: ASC
+      - property: file.path
+        direction: ASC
+    columnWidth: 260
+```
